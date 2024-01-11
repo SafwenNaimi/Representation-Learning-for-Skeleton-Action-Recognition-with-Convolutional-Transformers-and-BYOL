@@ -216,5 +216,5 @@ byol_model.summary()
 
 trained_byol_model, epoch_losses = byol_train_model(byol_model,byol_model, X_train, optimizer, batch_size, transformation_function, epochs=15, verbose=1)
 
-byol_model_save_path = "C:/Users/safwe/Documents/Coding/AcT_JHMDB_byol/utils/25.hdf5"
+byol_model_save_path = "BYOL_pretraining/model.hdf5"
 trained_byol_model.save(byol_model_save_path) 
