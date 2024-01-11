@@ -47,9 +47,12 @@ Install python libraries with:
        pip install -r requirements.txt
 7. Generate keypoints for each video:
     
-       python keypoints_finder.py
+       python data/keypoints_finder.py
 8. Generate npy file for each class:
 
-       python creating_npy.py     
+       python data/creating_npy.py     
 
 # BYOL Pretraining:
+To run a byol training process:
+
+       python BYOL_pretraining/byol_train_script.py      
