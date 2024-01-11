@@ -22,7 +22,7 @@ Install python libraries with:
 1. Download raw data from http://users.eecs.northwestern.edu/~jwa368/data/multiview_action_videos.tgz
 2. Download ViTPose Huge model: https://huggingface.co/JunkyByte/easy_ViTPose/blob/main/torch/coco_25/vitpose-h-coco_25.pth
 3. Place the ViTPose Huge model in data/
-4. Install the requirements from the data preparation:
+4. Install the requirements for the data preparation:
    
        cd data/       
        pip install -r requirements.txt
