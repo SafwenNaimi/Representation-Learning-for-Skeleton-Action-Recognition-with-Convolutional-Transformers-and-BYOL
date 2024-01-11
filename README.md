@@ -45,4 +45,6 @@ Install python libraries with:
    
        cd data/       
        pip install -r requirements.txt
-
+7. Generate keypoints for each video:
+    
+       python keypoints_finder.py
