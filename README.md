@@ -11,6 +11,7 @@ This repository complements our paper, providing a reference implementation of t
 We tested our code on the following environment.
 
 * tensorflow 2.6.0
-* python 3.8.10
-* pytorch 1.12.0
+* Python 3.8.5
+* numpy 1.23.5
+
 Install python libraries with:
