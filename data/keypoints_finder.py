@@ -1,7 +1,7 @@
 import os
 
 # Main directory containing subdirectories
-main_directory = 'C:/Users/safwe/Documents/Coding/easy_ViTPose-main/Nouveau dossier'
+main_directory = 'data/NW-UCLA'
 
 # Loop over subdirectoriesin
 for folder_name in os.listdir(main_directory):
@@ -21,7 +21,7 @@ for folder_name in os.listdir(main_directory):
 
                 # Call the script with the video file
                 #command = f'python keypointsfinder.py --source "{video_path}" --device "0"'
-                command = f'python C:/Users/safwe/Documents/Coding/easy_ViTPose-main/src/inference.py --input "{video_path}" --model C:/Users/safwe/Documents/Coding/easy_ViTPose-main/src/vitpose-25-h.pth --model-name h'
+                command = f'python data/inference.py --input "{video_path}" --model data/vitpose-h-coco_25.pth --model-name h'
                 os.system(command)
 
                 # Check if keypoints.json exists
