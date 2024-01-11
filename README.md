@@ -10,7 +10,7 @@ This repository complements our paper, providing a reference implementation of t
 # Dependencies
 We tested our code on the following environment.
 
-* CUDA 11.3
+* tensorflow 2.6.0
 * python 3.8.10
 * pytorch 1.12.0
 Install python libraries with:
