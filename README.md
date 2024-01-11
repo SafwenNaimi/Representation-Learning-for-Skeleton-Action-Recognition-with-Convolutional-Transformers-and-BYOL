@@ -52,7 +52,7 @@ Install python libraries with:
 
        python data/creating_npy.py     
 
-# BYOL Pretraining:
+# Bootstrap Your Own Latent (BYOL) for representation learning:
 To run a byol training process:
 
     python BYOL_pretraining/byol_train_script.py      
