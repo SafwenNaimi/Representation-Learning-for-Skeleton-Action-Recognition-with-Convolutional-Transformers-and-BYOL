@@ -21,26 +21,7 @@ openpose:
     KEYPOINTS: 15
     CLASSES: 10
     FRAMES: 30
-posenet:
-    KEYPOINTS: 13
-    CLASSES: 20
-    FRAMES: 30
-openpose_legacy:
-    KEYPOINTS: 13
-    CLASSES: 12
-    FRAMES: 30
-posenet_legacy:
-    KEYPOINTS: 17
-    CLASSES: 20
-    FRAMES: 30
-movenet:
-    KEYPOINTS: 13
-    CLASSES: 20
-    FRAMES: 30
-kinetics:
-    KEYPOINTS: 18
-    CLASSES: 400
-    FRAMES: 300
+
 LABELS: ['carry','doffing','donning','drop-trash','pu-onehand','pu-twohands','sit-down','stand-up','throw','walk-around']
 
 
@@ -58,24 +39,13 @@ micro:
     EMBED_DIM: 64
     DROPOUT: 0.3
     MLP: 256
-small:
-    N_HEADS: 2
-    N_LAYERS: 5
-    EMBED_DIM: 128
-    DROPOUT: 0.3
-    MLP: 256
 base:
     N_HEADS: 3
     N_LAYERS: 6
     EMBED_DIM: 192
     DROPOUT: 0.3
     MLP: 256
-large:
-    N_HEADS: 4
-    N_LAYERS: 6
-    EMBED_DIM: 256
-    DROPOUT: 0.4
-    MLP: 512
+
 
 #---- TRAINING SETTINGS
 SCHEDULER: True
