@@ -58,6 +58,8 @@ To run a supervised baseline experiment:
     python Supervised-Baseline/main.py -b 
     
 # Bootstrap Your Own Latent (BYOL) for Representation Learning:
+![byoll drawio (2) (1)](https://github.com/SafwenNaimi/Representation-Learning-for-Skeleton-Action-Recognition-with-Convolutional-Transformers-and-BYOL/assets/55064537/2a00d989-7edf-4217-a41f-785bfd0f1a9b)
+
 To run a byol training process:
 
     python BYOL_pretraining/byol_train_script.py      
