@@ -2,3 +2,6 @@
 
 
 ![new_architecture drawio_ drawio (1)](https://github.com/SafwenNaimi/Representation-Learning-for-Skeleton-Action-Recognition-with-Convolutional-Transformers-and-BYOL/assets/55064537/9c6fe0fd-cddf-45cb-b941-801a5146fa37)
+
+To extract robust and more generalizable skeleton action recognition features, large amounts of well-curated data are typically required, which is a challenging task hindered by annotation costs. Therefore, unsupervised representation learning is of prime importance to leverage unlabeled skeleton data. In this work, we investigate unsupervised representation learning for skeleton action recognition. 
+For this purpose, we designed a convolutional transformer framework exploiting the complementarity of convolutional and attention layers for jointly modeling spatial and temporal cues in an input skeleton sequence. We also introduce a Selection-Permutation strategy for skeleton joints to obtain more informative descriptions from the skeletal data. As well, we capitalize on Bootstrap Your Own Latent (BYOL) for the purpose of learning robust representations from unlabeled skeleton sequence data. We perform numerous experiments on the MCAD, IXMAS, JHMDB, and NW-UCLA datasets to show the effectiveness of our proposed method against current state-of-the-art methods in terms of performance and computational efficiency.
