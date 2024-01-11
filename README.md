@@ -20,9 +20,28 @@ Install python libraries with:
 
 # Data preparation for NW-UCLA:
 1. Download raw data from http://users.eecs.northwestern.edu/~jwa368/data/multiview_action_videos.tgz
-2. Download ViTPose Huge model: https://huggingface.co/JunkyByte/easy_ViTPose/blob/main/torch/coco_25/vitpose-h-coco_25.pth
-3. Place the ViTPose Huge model in data/
-4. Install the requirements for the data preparation:
+2. Place the videos in data/NW-UCLA in that form:
+
+        ├── data
+          ├── NW-UCLA
+             ├── carry
+                ├──  vid_1
+                ├──  vid_2
+                ........
+             ├── doffing
+                ├──  vid_1
+                ├──  vid_2
+                ........
+             ├── donning
+                ├──  vid_1
+                ├──  vid_2
+                ........
+             ├── ....
+             ├── ....
+   
+4. Download ViTPose Huge model: https://huggingface.co/JunkyByte/easy_ViTPose/blob/main/torch/coco_25/vitpose-h-coco_25.pth
+5. Place the ViTPose Huge model in data/
+6. Install the requirements for the data preparation:
    
        cd data/       
        pip install -r requirements.txt
