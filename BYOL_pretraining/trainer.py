@@ -27,7 +27,7 @@ from wandb.keras import WandbCallback
 import wandb
 wandb.login()
 
-wandb.init(entity="safwennaimi", project="Transformer_UCLA_ablation")
+wandb.init(entity="username", project="project_name")
 config = wandb.config
 config.lr = 1e-3 #1e-5
 config.batch_size = 4 #4
@@ -87,7 +87,7 @@ class Trainer:
         
     def build_act(self):
         #last_freeze_layer = 0
-        base_model = tf.keras.models.load_model('C:/Users/safwe/Documents/Coding/easy_ViTPose-main/MCAD_permute/byol.hdf5', ## BEST: byol_transformer_ucla_1
+        base_model = tf.keras.models.load_model('BYOL_pretraining/model.hdf5',
                                                 custom_objects={"PatchClassEmbedding": PatchClassEmbedding(d_model=192),  
                                                                 "HeNormal": tf.keras.initializers.HeNormal,
                                                                 "TransformerEncoder": TransformerEncoder(d_model=192, num_heads=3, d_ff=768, dropout=0.3, activation = tf.nn.gelu, n_layers= 6)})
@@ -122,8 +122,8 @@ class Trainer:
         print(self.model)
         for layer in self.model.layers:
             layer.trainable = False #False
-    
-        for layer in self.model.layers[1:]:
+        
+        for layer in self.model.layers[0:]: #0: for fully fine-tuning; 1: for freezing conv1d layer1; 2: for freezing conv1d layer2
             layer.trainable = True #True
         
         self.train_steps = np.ceil(float(self.train_len)/self.config['BATCH_SIZE'])
