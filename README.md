@@ -8,4 +8,9 @@ To extract robust and more generalizable skeleton action recognition features, l
 This repository complements our paper, providing a reference implementation of the method as described in the paper. Please contact the authors for enquiries regarding the code.
 
 # Dependencies
+We tested our code on the following environment.
 
+## CUDA 11.3
+python 3.8.10
+pytorch 1.12.0
+Install python libraries with:
