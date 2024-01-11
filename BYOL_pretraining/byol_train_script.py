@@ -12,7 +12,7 @@ from data import load_data, load_kinetics, random_flip, random_noise, one_hot
     
 X_train, y_train, X_test, y_test = load_data('vitpose', 1, 
                                                     legacy=False, verbose=False)
-#Final = np.concatenate(X_train, X_test)
+
 print(X_train.shape)
         
     
