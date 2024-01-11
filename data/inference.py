@@ -360,7 +360,7 @@ if __name__ == "__main__":
     keypoints_dict = []
     keypoints_list = []
     j = 1
-    seq = 12
+    seq = 30
     keypoints = []
     fps = []
     all_keypoints = []
@@ -407,7 +407,7 @@ if __name__ == "__main__":
             all_keypoints.append((keypoints_flat))
             #print(all_keypoints)
             if len(all_keypoints) >= 30:
-                # Format keypoints in blocks of 5
+                # Format keypoints in blocks of 30
                 keypoints_blocks = [all_keypoints[i:i+30] for i in range(0, len(all_keypoints), 30)]
                 #print(keypoints_blocks)
                 last_block = keypoints_blocks[-1]
@@ -419,24 +419,6 @@ if __name__ == "__main__":
                     json.dump(keypoints_blocks, json_file)
 
 
-
-
-        #frame_keypoints = frame_keypoints.tolist()
-        """
-        keypoints.append(frame_keypoints)
-        if j <= seq:
-            sequence.append(keypoints)
-
-        if len(sequence) == 5:
-            keypoints_dict.append(sequence)
-            keypoints_list.append(sequence)
-            write_keypoints_to_file(keypoints_list, 'keypoints.json')
-
-        if j == seq:
-            sequence = []
-            j = 0
-        j += 1
-        """
         fps.append(time.time() - t0)
 
         # Draw the poses and save the output img
