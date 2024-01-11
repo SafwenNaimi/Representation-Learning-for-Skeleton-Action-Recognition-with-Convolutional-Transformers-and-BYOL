@@ -19,7 +19,7 @@ from mpose import MPOSE
 from sklearn.model_selection import train_test_split
 from sklearn.utils import shuffle
 
-
+#chnage the labels according to the dataset
 labels = { # 20 Classes
     "check-watch":0,
     "cross-arms":1,
@@ -33,29 +33,7 @@ labels = { # 20 Classes
     "turn-around":9,
     "walk":10,
     "wave":11}
-"""
-labels = { # 20 Classes
-    "standing":0,
-    "check-watch":1,
-    "cross-arms":2,
-    "scratch-head":3,
-    "sit-down":4,
-    "get-up":5,
-    "turn":6, 
-    "walk":7, 
-    "wave1":8,
-    "box":9,
-    "kick":10,
-    "point":11, 
-    "pick-up":12,
-    "bend":13,
-    "hands-clap":14,
-    "wave2":15,
-    "jog":16,
-    "jump":17,
-    "pjump":18,
-    "run":19}
-"""
+
 
 def load_kinetics(config, fold=0):
     
