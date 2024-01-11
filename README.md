@@ -21,6 +21,7 @@ Install python libraries with:
 # Data preparation for NW-UCLA:
 1. Download raw data from http://users.eecs.northwestern.edu/~jwa368/data/multiview_action_videos.tgz
 2. Install the requirements from the data preparation:
+   
        cd data/       
        pip install -r requirements.txt
 
