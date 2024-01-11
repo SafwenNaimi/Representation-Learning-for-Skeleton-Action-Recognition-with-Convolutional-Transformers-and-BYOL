@@ -48,3 +48,6 @@ Install python libraries with:
 7. Generate keypoints for each video:
     
        python keypoints_finder.py
+8. Generate npy file for each class:
+
+       python creating_npy.py     
