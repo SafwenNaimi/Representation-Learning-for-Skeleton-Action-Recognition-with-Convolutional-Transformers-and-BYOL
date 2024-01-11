@@ -52,6 +52,11 @@ Install python libraries with:
 
        python data/creating_npy.py     
 
+# Supervised Baseline Training:
+To run a supervised baseline experiment:
+
+    python Supervised-Baseline/main.py -b 
+    
 # Bootstrap Your Own Latent (BYOL) for representation learning:
 To run a byol training process:
 
