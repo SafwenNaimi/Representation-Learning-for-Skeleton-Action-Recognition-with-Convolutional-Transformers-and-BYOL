@@ -55,4 +55,4 @@ Install python libraries with:
 # BYOL Pretraining:
 To run a byol training process:
 
-       python BYOL_pretraining/byol_train_script.py      
+    python BYOL_pretraining/byol_train_script.py      
