@@ -17,3 +17,6 @@ We tested our code on the following environment.
 Install python libraries with:
 
     pip install -r requirements.txt
+
+# Data preparation
+
