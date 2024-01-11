@@ -15,3 +15,5 @@ We tested our code on the following environment.
 * numpy 1.23.5
 
 Install python libraries with:
+
+pip install -r requirements.txt
