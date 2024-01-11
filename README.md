@@ -57,7 +57,13 @@ To run a supervised baseline experiment:
 
     python Supervised-Baseline/main.py -b 
     
-# Bootstrap Your Own Latent (BYOL) for representation learning:
+# Bootstrap Your Own Latent (BYOL) for Representation Learning:
 To run a byol training process:
 
     python BYOL_pretraining/byol_train_script.py      
+
+# Evaluating the Effectiveness of Learned Feature Hierarchies:
+To run experiments for fully fine-tuning and freezing Conv1D layers:
+
+    python BYOL_pretraining/main.py -b
+
