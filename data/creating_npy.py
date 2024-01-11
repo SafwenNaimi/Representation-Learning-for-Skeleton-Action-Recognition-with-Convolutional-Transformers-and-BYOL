@@ -2,8 +2,8 @@ import os
 import json
 import numpy as np
 
-main_folder_path = 'C:/Users/safwe/Documents/Coding/easy_ViTPose-main/IXMAS_30_new_reversed'
-output_folder_path = 'C:/Users/safwe/Documents/Coding/easy_ViTPose-main/IXMAS_30_new_reversed'
+main_folder_path = 'data/NW-UCLA'
+output_folder_path = 'data/NW-UCLA'
 
 for root, dirs, files in os.walk(main_folder_path):
     for folder_name in dirs:
