@@ -29,10 +29,10 @@ from tensorflow.keras import layers
 
 import wandb
 wandb.login()
-wandb.init(entity="safwennaimi", project="Transformer_UCLA_ablation")
+wandb.init(entity="username", project="project_name")
 config = wandb.config
-config.lr = 1e-3 #1e-5
-config.batch_size = 4 #4
+config.lr = 1e-3 
+config.batch_size = 4 
 config.epochs = 100
 config.dropout = 0.1
 config.recurrent_dropout = 0.1
@@ -87,7 +87,7 @@ class Trainer:
         self.d_ff = self.d_model * 4
         self.pos_emb = self.config['POS_EMB']
 
-        
+    #Building the model:    
     def build_act(self, transformer):
         inputs = tf.keras.layers.Input(shape=(self.config[self.config['DATASET']]['FRAMES'] // self.config['SUBSAMPLE'], 
                                               self.config[self.config['DATASET']]['KEYPOINTS'] * self.config['CHANNELS']))
@@ -115,7 +115,7 @@ class Trainer:
         self.model = self.build_act(transformer)
         self.model.summary()
         wandb.run.summary["model_summary"] = self.model.summary()
-        #wandb.run.summary["model_weights_path"] = self.bin_path + self.name_model_bin
+       
 
 
         
@@ -130,8 +130,8 @@ class Trainer:
         else:
             lr = 3 * 10**self.config['LR_MULT']
         
-        optimizer = tfa.optimizers.AdamW(learning_rate=lr, weight_decay=self.config['WEIGHT_DECAY'])
-        #optimizer = Nadam(learning_rate=lr, weight_decay=self.config['WEIGHT_DECAY'])
+       
+        optimizer = Nadam(learning_rate=lr, weight_decay=self.config['WEIGHT_DECAY'])
 
         self.model.compile(optimizer=optimizer,
                            loss=tf.keras.losses.CategoricalCrossentropy(from_logits=True, label_smoothing=0.1),
@@ -193,7 +193,6 @@ class Trainer:
         self.ds_test = self.ds_test.prefetch(tf.data.experimental.AUTOTUNE)
         
     def get_random_hp(self):
-        # self.config['RN_STD'] = self.trial.suggest_discrete_uniform("RN_STD", 0.0, 0.03, 0.01)
         self.config['WEIGHT_DECAY'] = self.trial.suggest_discrete_uniform("WD", 1e-5, 1e-3, 1e-5)
         self.config['N_EPOCHS'] = int(self.trial.suggest_discrete_uniform("EPOCHS", 50, 100, 10))
         self.config['WARMUP_PERC'] = self.trial.suggest_discrete_uniform("WARMUP_PERC", 0.1, 0.4, 0.1)
@@ -201,7 +200,6 @@ class Trainer:
         self.config['SUBSAMPLE'] = int(self.trial.suggest_discrete_uniform("SUBSAMPLE", 4, 8, 4))
         self.config['SCHEDULER'] = self.trial.suggest_categorical("SCHEDULER", [False, False])
         
-        # self.logger.save_log('\nRN_STD: {:.2e}'.format(self.config['RN_STD']))
         self.logger.save_log('\nEPOCHS: {}'.format(self.config['N_EPOCHS']))
         self.logger.save_log('WARMUP_PERC: {:.2e}'.format(self.config['WARMUP_PERC']))
         self.logger.save_log('WEIGHT_DECAY: {:.2e}'.format(self.config['WEIGHT_DECAY']))
@@ -217,8 +215,6 @@ class Trainer:
                        epochs=self.config['N_EPOCHS'], initial_epoch=0,
                        validation_data=self.ds_val,
                        callbacks=[self.checkpointer, WandbCallback], verbose=self.config['VERBOSE'],
-                       #steps_per_epoch=int(self.train_steps*0.9),
-                       #validation_steps=self.train_steps//9
                       )
         
         self.model.load_weights(self.bin_path+self.name_model_bin)            
