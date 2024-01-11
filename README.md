@@ -19,4 +19,4 @@ Install python libraries with:
     pip install -r requirements.txt
 
 # Data preparation
-
+1. Download raw data from http://users.eecs.northwestern.edu/~jwa368/data/multiview_action_videos.tgz
