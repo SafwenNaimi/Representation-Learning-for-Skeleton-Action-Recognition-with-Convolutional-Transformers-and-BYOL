@@ -51,3 +51,5 @@ Install python libraries with:
 8. Generate npy file for each class:
 
        python creating_npy.py     
+
+# BYOL Pretraining:
