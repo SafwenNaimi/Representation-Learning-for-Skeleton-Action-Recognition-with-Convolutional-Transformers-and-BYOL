@@ -31,9 +31,9 @@ import wandb
 wandb.login()
 wandb.init(entity="username", project="project_name")
 config = wandb.config
-config.lr = 1e-3 
-config.batch_size = 4 
-config.epochs = 100
+config.lr = 1e-4 
+config.batch_size = 128 
+config.epochs = 500
 config.dropout = 0.1
 config.recurrent_dropout = 0.1
 config.filters_1 = 16
