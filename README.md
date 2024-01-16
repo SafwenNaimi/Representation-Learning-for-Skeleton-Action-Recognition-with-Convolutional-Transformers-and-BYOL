@@ -14,7 +14,7 @@ We tested our code on the following environment.
 * Python 3.8.5
 * numpy 1.23.5
 
-Install python libraries with:
+First, clone the repository and install the required pip packages (virtual environment recommended!):
 
     pip install -r requirements.txt
 
