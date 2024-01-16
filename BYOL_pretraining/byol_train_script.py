@@ -48,7 +48,7 @@ def byol_train_model(online_network, target_network, X_train, optimizer, batch_s
             print("Epoch: {} Loss: {:.3f}".format(epoch + 1, np.mean(step_wise_loss)))
 
         # Update target network with exponential moving average
-        update_target_network(online_network, target_network, momentum=0.99)
+        update_target_network(online_network, target_network, momentum=0.9)
 
     return online_network, epoch_wise_loss
 
@@ -149,9 +149,9 @@ def generate_composite_transform_function_simple(transform_funcs):
     return combined_transform_func
 
 
-batch_size = 16
+batch_size = 64
 decay_steps = 1000
-epochs = 200
+epochs = 100
 temperature = 0.1
 transform_funcs = [
     noise_transform_vectorized,
@@ -197,7 +197,7 @@ start_time = datetime.datetime.now()
 start_time_str = start_time.strftime("%Y%m%d-%H%M%S")
 tf.keras.backend.set_floatx('float32')
 
-lr_decayed_fn = tf.keras.experimental.CosineDecay(initial_learning_rate=0.1, decay_steps=decay_steps)
+lr_decayed_fn = tf.keras.experimental.CosineDecay(initial_learning_rate=0.01, decay_steps=decay_steps)
 optimizer = tf.keras.optimizers.SGD(lr_decayed_fn)
 # transformation_function = byol_utitlities.generate_combined_transform_function(trasnform_funcs_vectorized, indices=trasnformation_indices)
 
@@ -205,7 +205,7 @@ base_model = create_base_model(input_shape, model_name="base_model")
 byol_model = attach_byol_head(base_model)
 byol_model.summary()
 
-trained_byol_model, epoch_losses = byol_train_model(byol_model,byol_model, X_train, optimizer, batch_size, transformation_function, epochs=15, verbose=1)
+trained_byol_model, epoch_losses = byol_train_model(byol_model,byol_model, X_train, optimizer, batch_size, transformation_function, epochs=epochs, verbose=1)
 
 byol_model_save_path = "BYOL_pretraining/model.hdf5"
 trained_byol_model.save(byol_model_save_path) 
