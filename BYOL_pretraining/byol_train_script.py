@@ -6,20 +6,11 @@ from sklearn.model_selection import train_test_split
 from tensorflow.keras.layers import Conv1D, BatchNormalization, MaxPooling1D, Dropout, Flatten, Dense, LSTM, TimeDistributed, AveragePooling1D
 from transformer import TransformerEncoder, PatchClassEmbedding, Patches
 from data import load_data, load_kinetics, random_flip, random_noise, one_hot
-
-
-
     
 X_train, y_train, X_test, y_test = load_data('vitpose', 1, 
                                                     legacy=False, verbose=False)
-
 print(X_train.shape)
         
-    
-
-
-
-
 def byol_train_model(online_network, target_network, X_train, optimizer, batch_size, transformation_function, epochs=100, verbose=0):
     epoch_wise_loss = []
 
