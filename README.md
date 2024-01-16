@@ -69,3 +69,8 @@ To run experiments for fully fine-tuning and freezing Conv1D layers:
 
     python BYOL_pretraining/main.py -b
 
+pre-trained weights will be available upon acceptance!
+
+That's a wrap!
+
+
