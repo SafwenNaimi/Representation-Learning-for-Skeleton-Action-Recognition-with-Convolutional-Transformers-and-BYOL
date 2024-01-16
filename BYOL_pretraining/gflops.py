@@ -14,7 +14,7 @@ from keras_flops import get_flops
 
 
 d_models= 192
-input_shape = ((30,13))
+input_shape = ((30,13)) #Your input shape
 
 inputs = tf.keras.Input(shape=input_shape, name='input')
 print("this is the input")
