@@ -1,9 +1,8 @@
 # Representation Learning for Skeleton Action Recognition with Convolutional Transformers and BYOL
 
 
-![new_architecture drawio_ drawio (1)](https://github.com/SafwenNaimi/Representation-Learning-for-Skeleton-Action-Recognition-with-Convolutional-Transformers-and-BYOL/assets/55064537/9c6fe0fd-cddf-45cb-b941-801a5146fa37)
 
-To extract robust and more generalizable skeleton action recognition features, large amounts of well-curated data are typically required, which is a challenging task hindered by annotation costs. Therefore, unsupervised representation learning is of prime importance to leverage unlabeled skeleton data. In this work, we investigate unsupervised representation learning for skeleton action recognition. 
+To extract robust and more generalizable skeleton action recognition features, large amounts of well-curated data are typically required, which is a challenging task hindered by annotation costs. In this work, we investigate unsupervised representation learning for skeleton action recognition. For this purpose, we designed a convolutional transformer framework, named ReL-SAR, exploiting the complementarity of convolutional and attention layers for jointly modeling spatial and temporal cues in skeleton sequences.
 
 This repository complements our paper, providing a reference implementation of the method as described in the paper. Please contact the authors for enquiries regarding the code.
 
@@ -58,7 +57,6 @@ To run a supervised baseline experiment:
     python Supervised-Baseline/main.py -b 
     
 # Bootstrap Your Own Latent (BYOL) for Representation Learning:
-![byoll drawio (2) (1)](https://github.com/SafwenNaimi/Representation-Learning-for-Skeleton-Action-Recognition-with-Convolutional-Transformers-and-BYOL/assets/55064537/2a00d989-7edf-4217-a41f-785bfd0f1a9b)
 
 To run a byol training process:
 
