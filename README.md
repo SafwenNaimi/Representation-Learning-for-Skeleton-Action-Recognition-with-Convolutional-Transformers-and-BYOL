@@ -44,7 +44,7 @@ First, clone the repository and install the required pip packages (virtual envir
    
        cd data/       
        pip install -r requirements.txt
-7. Generate keypoints for each video:
+7. Generate the keypoints for each video:
     
        python data/keypoints_finder.py
 8. Generate npy file for each class:
