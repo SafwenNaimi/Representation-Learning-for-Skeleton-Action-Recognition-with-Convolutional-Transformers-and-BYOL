@@ -4,7 +4,7 @@
 
 To extract robust and more generalizable skeleton action recognition features, large amounts of well-curated data are typically required, which is a challenging task hindered by annotation costs. In this work, we investigate unsupervised representation learning for skeleton action recognition. For this purpose, we designed a convolutional transformer framework, named ReL-SAR, exploiting the complementarity of convolutional and attention layers for jointly modeling spatial and temporal cues in skeleton sequences.
 
-![alt text]([image-url](https://github.com/SafwenNaimi/Representation-Learning-for-Skeleton-Action-Recognition-with-Convolutional-Transformers-and-BYOL/blob/main/fig2.png))
+![https://github.com/SafwenNaimi/Representation-Learning-for-Skeleton-Action-Recognition-with-Convolutional-Transformers-and-BYOL/blob/main/fig2.png]
 
 This repository complements our paper, providing a reference implementation of the method as described in the paper. Please contact the authors for enquiries regarding the code.
 
